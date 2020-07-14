@@ -36,8 +36,13 @@ class App extends React.Component {
   }
 
   adoptPet = id => {
-    const petToAdopt = this.state.pets.find(pet => pet.id = id )
-    petToAdopt.isAdopted = true
+    const petToAdopt = this.state.pets.find(pet => pet.id === id )
+    const petIndex = this.state.pets.indexOf(petToAdopt)
+    const newPetsArray = [...this.state.pets]
+    newPetsArray[petIndex].isAdopted = true
+    this.setState({
+      pets: newPetsArray
+    })
   }
 
   render() {

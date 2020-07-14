@@ -5,11 +5,11 @@ class Pet extends React.Component {
     return (
       <div className="card">
         <div className="content">
-          <a className="header">
+          <p className="header">
             {/*'♀' OR '♂' */}
             PET NAME: {this.props.pet.name} 
             { `${this.props.pet.gender}` === 'male' ?  '♂' : '♀'}
-          </a>
+          </p>
           <div className="meta">
             <span className="date">PET TYPE: {this.props.pet.type}</span>
           </div>
